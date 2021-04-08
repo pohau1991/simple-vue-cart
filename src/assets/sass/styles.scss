@@ -1,0 +1,122 @@
+$placeholder-color : #ddd;
+
+
+.btn{
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+    cursor:pointer;
+    border-radius: 8px;
+    
+    &.normal{
+        border:1px solid #f0f0f0;
+        
+        &:hover, &:focus, &:active, &.active{
+            color:#fff;
+            background: #d0d0d0;
+            border:1px solid #fff;
+        }
+    }
+}
+nav {
+    display: flex;
+    .navigationContainer {
+        width: 100%;
+        display: flex;
+
+        .linkContainer {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        
+    }
+    .cart {
+        width: 40px;
+        height:40px;
+        background:#ddd;
+        cursor:pointer;
+    }
+}
+
+
+
+
+.viewContainer {
+    display: flex;
+    width:100%;
+}
+.routedView{
+    display:block;
+    width:100%;
+}
+.cartView {
+    width: 25%;
+    transition: opacity 1s ease-out;
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+    min-width: 200px;
+    opacity: 0;
+    display:none;
+    &.active{
+        display:block;
+        opacity: 1;
+    }
+
+}
+.lineItem {
+    display: flex;
+}
+
+.lineItemPrice {
+    width: 50px;
+    
+}
+.lineItemInfo {
+    width: 100%;
+    p{
+        text-align:left;
+    }
+}
+.filter.container{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    
+    .filter{
+        padding:10px 15px;
+        text-transform:capitalize;
+        border:1px solid;
+        cursor:pointer;
+        
+    }
+}
+
+.menu.container {
+    display: flex;
+    flex-wrap:wrap;
+    max-width: 1200px;
+    margin: auto;
+    justify-content:center;
+
+    .itemCard {
+        width: 25%;
+        min-width: 185px;
+        margin: 10px 15px;
+
+        .cardImageContainer {
+            height: 150px;
+            
+            .imagePlaceholder {
+                background:  $placeholder-color;
+                height: 100%;
+            }
+        }
+                
+        .cardInfoContainer {
+            border: 1px solid #ddd;
+            border-top: 1px solid #000;
+        }
+    }
+    
+}
+

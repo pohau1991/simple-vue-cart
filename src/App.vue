@@ -22,7 +22,7 @@
                   <div class="lineItemPrice">
                     <p>{{currencyFormatter.format(lineItem.item.price)}}</p>
                   </div>
-                  <button type="button" class="btn remove-btn" @click="removeLineItem(index)">X</button>
+                  <button type="button" class="btn btn-remove" @click="removeLineItem(index)">X</button>
                 </div>         
               </div>
               <div class="cartInfoContainer">

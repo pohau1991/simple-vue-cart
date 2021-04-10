@@ -1,30 +1,36 @@
 <template>
     <div id="catalogContainer">
-        <div v-if="items" class='container'>
-            <div class='filter container'>
-                <div v-for="category in categories" v-bind:key="category" class="filter btn normal" :class="selectedCategories.includes(category)? 'active' :''" @click="setFilter($event, category)">
-                    {{ category }}
-                </div>
-            </div>
-            <div class='menu container'>
-                <div v-for="item in items" v-bind:key="item.id" class="itemCard">
-                    <div class = 'cardImageContainer'>
-                        <img v-if="item.images.length">
-                        <div class="imagePlaceholder" v-else>
-
-                        </div>
+        <div v-if="items" class='container flex'>
+            <section class="filterSection">
+                <div class='filterContainer'>
+                    <div v-for="category in categories" v-bind:key="category" class="filter btn normal" :class="selectedCategories.includes(category)? 'active' :''" @click="setFilter($event, category)">
+                        {{ category }}
                     </div>
-                    <div class="cardInfoContainer">
-                        <p>{{item.name}}</p>
-                        <p>{{item.category}}</p>
-                        <p>${{item.price}}</p>
-                    </div>  
-                    <button type="button" @click="addToCart(item)">Add to Cart</button>
                 </div>
-            </div>
+            </section>
+            <section class="menuSection">
+                <div class='menuContainer'>
+                    <div v-for="item in items" v-bind:key="item.id" class="itemCard">
+                        <div class = 'cardImageContainer'>
+                            <img v-if="item.images.length">
+                            <div class="imagePlaceholder" v-else>
+
+                            </div>
+                        </div>
+                        <div class="cardInfoContainer">
+                            <div class="cardInfo">
+                                <p>{{item.name}}</p>
+                                <p>{{item.category}}</p>
+                                <p>${{item.price}}</p>
+                            </div>
+                            <button type="button" class="btn btn-action" @click="addToCart(item)">Add to Cart</button>
+                        </div>  
+                    </div>
+                </div>
+            </section>
         </div>
         <div v-else class="empty container">
-            <h1>You have no shits</h1>
+            <h1>You have no items</h1>
         </div>
     </div>
 </template>

@@ -147,14 +147,6 @@ nav{
                         text-align:left;
                     }
                 }
-                button.btn.remove-btn {
-                    height: 25px;
-                    border-radius: 50%;
-                    border: 1px solid #000;
-                    width: 30px;
-                    margin-left: 10px;
-                    vertical-align: bottom;
-                }
             }
         }
     }
@@ -168,7 +160,6 @@ nav{
     transition: background-color 0.5s ease;
     transition: color 0.5s ease;
     cursor:pointer;
-    border-radius: 8px;
     
     &.normal{
         border:1px solid #f0f0f0;
@@ -178,6 +169,20 @@ nav{
             background: #d0d0d0;
             border:1px solid #fff;
         }
+    }
+    &.btn-action{
+        width: 100%;
+        padding: 8px;
+        background: #f7c88a;
+        border: 1px solid #8f7047;
+    }
+    &.btn-remove {
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        width: 30px;
+        margin-left: 10px;
+        vertical-align: bottom;
     }
 }
 
@@ -192,47 +197,55 @@ nav{
 }
 
 
+.filterSection{
+    display:block; 
+    width:220px;
 
-.filter.container{
-    display:flex;
-    width:100%;
-    justify-content: space-around;
+    .filterContainer{
     
-    .filter{
-        padding:10px 15px;
-        text-transform:capitalize;
-        border:1px solid;
-        cursor:pointer;
-        
+    
+        .filter{
+            padding:10px 15px;
+            text-transform:capitalize;
+            border:1px solid;
+            cursor:pointer;
+            
+        }
     }
 }
 
-.menu.container {
-    display: flex;
-    flex-wrap:wrap;
-    max-width: 1200px;
-    margin: auto;
-    justify-content:center;
+.menuSection{
+    width:100%;
+    
+    .menuContainer {
+        display: flex;
+        flex-wrap:wrap;
+        width:100%;
+        justify-content:center;
 
-    .itemCard {
-        width: 25%;
-        min-width: 185px;
-        margin: 10px 15px;
+        .itemCard {
+            width: 25%;
+            min-width: 185px;
+            margin: 10px 15px;
 
-        .cardImageContainer {
-            height: 150px;
-            
-            .imagePlaceholder {
-                background:  $placeholder-color;
-                height: 100%;
+            .cardImageContainer {
+                height: 150px;
+                
+                .imagePlaceholder {
+                    background:  $placeholder-color;
+                    height: 100%;
+                }
+            }
+                    
+            .cardInfoContainer {
+                border: 1px solid #ddd;
+                border-top: 1px solid #000;
+                
+                .cardInfo {
+                    padding: 5px 15px;
+                }
             }
         }
-                
-        .cardInfoContainer {
-            border: 1px solid #ddd;
-            border-top: 1px solid #000;
-        }
-    }
-    
+    }    
 }
 

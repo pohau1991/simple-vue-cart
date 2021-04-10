@@ -27,6 +27,7 @@
               </div>
               <div class="cartInfoContainer">
                 <p>Subtotal: {{currencyFormatter.format(cart.subtotal)}}</p>
+                <button type="button" class="btn btn-action">Checkout</button>
               </div>
             </div>
             <h3 v-else>Empty Cart</h3>

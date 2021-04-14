@@ -30,4 +30,17 @@ export default class ItemList{
         this.items = items;
         this.categories = cat;
     }
+    setItems(tempItems){
+        let items = [];
+        let cat = [];
+        tempItems.forEach(function(tempItem, index){
+            let item = new Item(tempItem.id, tempItem.name, tempItem.description, tempItem.price, tempItem.category);
+            items.push(item);
+            if(!cat.includes(tempItem.category)){
+                cat.push(tempItem.category);
+            }
+        })
+        this.items = items;
+        this.categories = cat;
+    }
 }

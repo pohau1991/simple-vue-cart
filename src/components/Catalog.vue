@@ -65,6 +65,9 @@ export default {
     created(){
         console.log('stupid');
     },
+    updated(){
+        this.fullItemList = this.$store.state.items.items;
+    },
     methods:{
         setFilter(e, category){
             let temp = this.selectedCategories.indexOf(category);

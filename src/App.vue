@@ -53,6 +53,11 @@ export default {
       showCart: false,
     }
   },
+  mounted(){
+    if(this.$store.state.items.items.length === 0){
+      this.$store.dispatch('loadItems');
+    }
+  },
   created(){
     this.currencyFormatter = new Intl.NumberFormat('en-US', {
       style: 'currency',

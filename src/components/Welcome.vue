@@ -12,8 +12,7 @@ export default {
     msg: String
   },
   created(){
-    console.log('hi')
-    console.log(this.$store.state);
+    
   }
 }
 </script>
